@@ -14,21 +14,21 @@ const questions = [
   {
     type: "input",
     name: "description",
-    message: "Provide some information about the application:",
+    message: "Provide a description of the application:",
   },
-  {
-      type: 'checkbox',
-      name: 'contents',
-      message: 'What contents would you like to display in your table on contents?',
-      choices: [
-          'Installation',
-          'Usage',
-          'Contributing',
-          'Tests',
-          'Questions',
-          'License'
-      ],
-  },
+//   {
+//       type: 'checkbox',
+//       name: 'contents',
+//       message: 'What contents would you like to display in your table on contents?',
+//       choices: [
+//           'Installation',
+//           'Usage',
+//           'Contributing',
+//           'Tests',
+//           'Questions',
+//           'License'
+//       ],
+//   },
   {
     type: "input",
     name: "installation",
@@ -99,7 +99,8 @@ const writeToFile = (data) => {
 
 // TODO: Create a function to initialize app
 const init = () => {
-  inquirer.prompt(questions)
+  inquirer
+  .prompt(questions)
   .then((readmeData) => {
       console.log(readmeData);
       return generateMarkdown(readmeData);
