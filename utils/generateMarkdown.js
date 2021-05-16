@@ -29,8 +29,9 @@ return `
   ## Usage
 
   ${data.usage}
+  
+  ![image](../${data.screenshot ? data.screenshot : ''})
 
-  ${data.screenshot ? data.screenshot : ''}
 
   ## Contributing
   ${data.contributing}
