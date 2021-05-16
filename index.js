@@ -16,19 +16,6 @@ const questions = [
     name: "description",
     message: "Provide a description of the application:",
   },
-//   {
-//       type: 'checkbox',
-//       name: 'contents',
-//       message: 'What contents would you like to display in your table on contents?',
-//       choices: [
-//           'Installation',
-//           'Usage',
-//           'Contributing',
-//           'Tests',
-//           'Questions',
-//           'License'
-//       ],
-//   },
   {
     type: "input",
     name: "installation",
@@ -75,7 +62,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "Choose your license",
-    choices: ["MIT", "Apache-2.0", "BSD", "GPL-3.0"],
+    choices: ["MIT", "Apache", "BSD", "GPL"],
   },
 ];
 

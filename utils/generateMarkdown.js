@@ -38,11 +38,21 @@ return `
 
   # ${data.title}
 
+  ![license](https://img.shields.io/badge/license-${data.license}-green)
+
   ## Description
 
   ${data.description}
 
-  ${renderLicenseBadge(data)}
+  ## Table of Contents
+
+  * [Installation](#installation)
+  * [Usage](#installation)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [License](#license)
+
   
   ## Installation
 
@@ -52,6 +62,7 @@ return `
   ## Usage
 
   ${data.usage}
+  
   ${data.screenshot}
 
   ## Contributing
@@ -66,9 +77,10 @@ return `
   * GitHub: ${data.github}
   * For more questions, reach me at ${data.questions}
 
-  ${renderLicenseSection(data)}
-  `;
+  ## License 
+  Licensed under the ${data.license} license.
 
+  `;
 };
 
 module.exports = generateMarkdown;
