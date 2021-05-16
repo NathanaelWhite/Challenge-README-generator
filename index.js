@@ -68,28 +68,21 @@ const questions = [
 
 // TODO: Create a function to write README file
 const writeToFile = (data) => {
-  return new Promise((resolve, reject) => {
     fs.writeFile('./dist/README.md', data, (err) => {
         // if there is an error, reject the promise 
         if (err) {
-            reject(err)
-            return;
+            throw(err);
         }
-        // if there are no errors, resolve the promise
-        resolve({
-            ok: true,
-            message: 'File created',
+        // if there are no errors, console log
+            console.log('File Created');
         });
-    });
-  });
-}
+};
 
 // TODO: Create a function to initialize app
 const init = () => {
   inquirer
   .prompt(questions)
   .then((readmeData) => {
-      console.log(readmeData);
       return generateMarkdown(readmeData);
   })
   .then((data) => {
