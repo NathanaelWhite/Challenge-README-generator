@@ -1,5 +1,4 @@
 // TODO: Include packages needed for this application
-const { rejects } = require("assert");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
@@ -16,6 +15,19 @@ const questions = [
     type: "input",
     name: "description",
     message: "Provide some information about the application:",
+  },
+  {
+      type: 'checkbox',
+      name: 'contents',
+      message: 'What contents would you like to display in your table on contents?',
+      choices: [
+          'Installation',
+          'Usage',
+          'Contributing',
+          'Tests',
+          'Questions',
+          'License'
+      ],
   },
   {
     type: "input",
@@ -47,7 +59,7 @@ const questions = [
   {
       type: 'input',
       name: 'test',
-      message: 'Add tests  for your application.'
+      message: 'Add tests for your application.'
   },
   {
       type: 'input',
@@ -89,6 +101,7 @@ const writeToFile = (data) => {
 const init = () => {
   inquirer.prompt(questions)
   .then((readmeData) => {
+      console.log(readmeData);
       return generateMarkdown(readmeData);
   })
   .then((data) => {

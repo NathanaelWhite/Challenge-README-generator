@@ -10,6 +10,34 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+const generateToC = (contentsArr) => {
+  let toC = '## Table of Contents'
+  
+  if (data.installation !== '') {
+    toC += ` * [Installation](#${data.installation})`
+  };
+  
+  if (data.usage !== '') {
+    toC += `*[Usage](#${data.usage})`
+  };
+  
+  if (data.contributing !== '') {
+    toC += `*[Contributing](#${data.contributing})`
+  };
+  
+  if (data.test !== '') {
+    toC += `*[Tests](#${data.test})`
+  };
+  
+  if (data.questions !== '') {
+    toC += `*[Questions](#${data.questions})`
+  };
+  
+  if (data.license !== '') {
+    toC += `*[License](#${data.license})`
+  }; 
+};
+
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = (data) => {
   return `
@@ -17,14 +45,15 @@ const generateMarkdown = (data) => {
 
   ![license](https://img.shields.io/badge/license-${data.license}-green)
 
-
   ## Description
 
   ${data.description}
 
+
   ## Installation
 
   ${data.installation}
+
 
   ## Usage
 
@@ -41,7 +70,7 @@ const generateMarkdown = (data) => {
 
   ## Questions
 
-  * GitHub: ${data.gitHub}
+  * GitHub: ${data.github}
   * For more questions, reach me at ${data.questions}
 
   ## License
@@ -49,6 +78,6 @@ const generateMarkdown = (data) => {
   Licensed under the ${data.license} license.
 
 `;
-}
+};
 
 module.exports = generateMarkdown;
