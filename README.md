@@ -37,6 +37,3 @@
   ## Questions 
   * GitHub: NathanaelWhite
   * For more questions, reach me at narhanaelw99@gmail.com
-
-  ## License 
-  None
