@@ -22,7 +22,7 @@
 
   Run 'node index.js' in the command line and then follow the prompts until the terminal shows 'File Created'
   
-  Video example: https://drive.google.com/file/d/1zBJOMiH4oNGlaUv451woYIT_HwMMz0u2/view
+  Video example: https://drive.google.com/file/d/1zBJOMiH4oNGlaUv451woYIT_HwMMz0u2/view?usp=sharing
   
   ![image](./assets/images/READMEscreenshot.png)
 
